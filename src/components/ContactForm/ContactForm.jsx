@@ -22,9 +22,11 @@ export class ContactForm extends Component {
     console.log(e.target.elements.name.value);
 
     this.props.onSubmit(this.state);
+    // localStorage.setItem(this.state.name, this.state.number);
     // console.log(this.props);
     this.reset();
   };
+
   reset = () => {
     this.setState({ id: '', name: '', number: '' });
   };
